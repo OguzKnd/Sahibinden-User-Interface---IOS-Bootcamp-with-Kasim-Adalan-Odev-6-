@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y43-fA-vOc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vitrin-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AramaSayfasi" customModule="Odev7_Listeleme_Arayuzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vitrin" image="star.square.on.square.fill" catalog="system" id="Igv-sD-Yrt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="58"/>
+        </scene>
+        <!--İlan Ver-->
+        <scene sceneID="jYC-M3-8dw">
+            <objects>
+                <viewController id="dYf-dl-eAu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sBI-WD-2yi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="p7q-5z-F2d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="İlan Ver" image="plus.circle" catalog="system" id="Rqn-7y-Jsi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wb9-P3-Dan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="-737"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WCC-7f-DUX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y43-fA-vOc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7k6-nW-XYT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i3Z-2q-RUp"/>
+                        <segue destination="oK8-OG-k8D" kind="relationship" relationship="viewControllers" id="Kob-JP-gyR"/>
+                        <segue destination="dYf-dl-eAu" kind="relationship" relationship="viewControllers" id="3TL-Xk-h36"/>
+                        <segue destination="ins-ij-5h7" kind="relationship" relationship="viewControllers" id="dpg-pE-2JW"/>
+                        <segue destination="Aiu-6c-moS" kind="relationship" relationship="viewControllers" id="rCj-kM-rJn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpo-CW-1fG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="-27.455357142857142"/>
+        </scene>
+        <!--Arama-->
+        <scene sceneID="EVa-yr-4kK">
+            <objects>
+                <viewController id="DW4-8C-dCo" customClass="AramaSayfasi" customModule="Odev7_Listeleme_Arayuzu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4p-fo-A41">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" text="" placeholder="Kelime veya ilan No. ile ara" translatesAutoresizingMaskIntoConstraints="NO" id="UNh-bA-Kzc">
+                                <rect key="frame" x="0.0" y="92" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DW4-8C-dCo" id="tPO-mR-Gqb"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OEn-vG-EuS">
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="satirlarHucre" id="dQE-Y3-f9H" customClass="satirlarHucre" customModule="Odev7_Listeleme_Arayuzu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dQE-Y3-f9H" id="Qmc-Bk-eHS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-Pd-p0H">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <stackView contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fI4-uA-EC2">
+                                                    <rect key="frame" x="64" y="8" width="286" height="39"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emlak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-Vz-ams">
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="G8w-0R-S16"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konut, İş Yeri, Arsa, Konut Projeleri, Bina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2g-LJ-lWN">
+                                                            <rect key="frame" x="0.0" y="25.5" width="286" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b9M-rg-r0d">
+                                                    <rect key="frame" x="16" y="10.5" width="40" height="29"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="oGu-PX-3y0"/>
+                                                        <constraint firstAttribute="width" constant="40" id="pve-ve-bTd"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="b9M-rg-r0d" firstAttribute="leading" secondItem="Qmc-Bk-eHS" secondAttribute="leading" constant="16" id="0b3-4E-wQZ"/>
+                                                <constraint firstItem="IRA-Pd-p0H" firstAttribute="leading" secondItem="Qmc-Bk-eHS" secondAttribute="leading" id="4E1-Ox-w27"/>
+                                                <constraint firstAttribute="bottom" secondItem="b9M-rg-r0d" secondAttribute="bottom" constant="10" id="UcD-JG-CC4"/>
+                                                <constraint firstItem="b9M-rg-r0d" firstAttribute="centerY" secondItem="Qmc-Bk-eHS" secondAttribute="centerY" id="Xbf-Mm-ZlW"/>
+                                                <constraint firstItem="fI4-uA-EC2" firstAttribute="leading" secondItem="b9M-rg-r0d" secondAttribute="trailing" constant="8" symbolic="YES" id="ZHr-2u-L0g"/>
+                                                <constraint firstAttribute="trailing" secondItem="IRA-Pd-p0H" secondAttribute="trailing" id="cD8-Xb-p99"/>
+                                                <constraint firstAttribute="bottom" secondItem="IRA-Pd-p0H" secondAttribute="bottom" id="hmL-IE-3YT"/>
+                                                <constraint firstItem="fI4-uA-EC2" firstAttribute="centerX" secondItem="Qmc-Bk-eHS" secondAttribute="centerX" id="iW0-aj-2iZ"/>
+                                                <constraint firstItem="IRA-Pd-p0H" firstAttribute="top" secondItem="Qmc-Bk-eHS" secondAttribute="top" id="iYU-EN-Z3P"/>
+                                                <constraint firstItem="fI4-uA-EC2" firstAttribute="top" secondItem="Qmc-Bk-eHS" secondAttribute="topMargin" constant="-3" id="pXm-H1-Skk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="aciklamaLabel" destination="O2g-LJ-lWN" id="Efc-xS-iQj"/>
+                                            <outlet property="hucreArkaPlan" destination="IRA-Pd-p0H" id="eF4-7a-Rsk"/>
+                                            <outlet property="imageViewSatir" destination="b9M-rg-r0d" id="SNY-Gk-KS4"/>
+                                            <outlet property="isimLabel" destination="0fK-Vz-ams" id="o46-ms-OoZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tyh-63-XTZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OEn-vG-EuS" firstAttribute="top" secondItem="UNh-bA-Kzc" secondAttribute="bottom" id="9Kt-Ym-Fid"/>
+                            <constraint firstItem="UNh-bA-Kzc" firstAttribute="top" secondItem="tyh-63-XTZ" secondAttribute="top" id="FmH-je-dr9"/>
+                            <constraint firstItem="UNh-bA-Kzc" firstAttribute="leading" secondItem="OEn-vG-EuS" secondAttribute="leading" id="Gra-Me-HHv"/>
+                            <constraint firstAttribute="trailing" secondItem="UNh-bA-Kzc" secondAttribute="trailing" id="R6A-5Q-bgu"/>
+                            <constraint firstItem="OEn-vG-EuS" firstAttribute="bottom" secondItem="tyh-63-XTZ" secondAttribute="bottom" id="XVa-mk-9Tq"/>
+                            <constraint firstItem="UNh-bA-Kzc" firstAttribute="trailing" secondItem="OEn-vG-EuS" secondAttribute="trailing" id="bhS-a1-RRB"/>
+                            <constraint firstItem="UNh-bA-Kzc" firstAttribute="leading" secondItem="c4p-fo-A41" secondAttribute="leading" id="p6u-h7-ERS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Arama" id="bwR-eg-ihy">
+                        <barButtonItem key="leftBarButtonItem" id="6SC-Vt-nAD">
+                            <imageReference key="image" image="s.square.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color red="0.96268304630000001" green="1" blue="0.031728263069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color red="0.96268304630000001" green="1" blue="0.031728263069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <color key="tintColor" red="1" green="0.95517038938251009" blue="0.12165497782186718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="PQo-gu-4FG">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="satirlarTableView" destination="OEn-vG-EuS" id="RFL-Qd-aRV"/>
+                        <outlet property="searchBar" destination="UNh-bA-Kzc" id="xIw-Qe-O74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-zN-6HR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="-737"/>
+        </scene>
+        <!--Servisler-->
+        <scene sceneID="JKY-ND-RYW">
+            <objects>
+                <viewController id="ins-ij-5h7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3J-Hc-Oaj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FjB-m3-Gc9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Servisler" image="car" catalog="system" id="ycp-EO-en4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGA-hx-AFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="58"/>
+        </scene>
+        <!--Bana Özel-->
+        <scene sceneID="def-uY-hQj">
+            <objects>
+                <viewController id="Aiu-6c-moS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="txU-JX-zli">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0ea-DW-MwA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bana Özel" image="person.fill" catalog="system" badgeValue="2" id="s2l-ZR-4Pe">
+                        <color key="badgeColor" systemColor="systemRedColor"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCb-m1-wxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="58"/>
+        </scene>
+        <!--Arama-->
+        <scene sceneID="w07-jE-nA7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oK8-OG-k8D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Arama" image="magnifyingglass" catalog="system" id="eQv-CT-FuN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Qm-gD-5cp">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DW4-8C-dCo" kind="relationship" relationship="rootViewController" id="7Jm-BJ-CDc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6st-Sl-AlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-737"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <image name="s.square.fill" catalog="system" width="128" height="114"/>
+        <image name="star.square.on.square.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
